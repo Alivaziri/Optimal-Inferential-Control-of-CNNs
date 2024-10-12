@@ -1,5 +1,5 @@
 ## Optimal Inferential Control of Convolutional Neural Networks
-Official implementation of the `Kalman-MPC`; a GPU-compatible single pass filtering and smoothing algorithm that uses matrix variate distribution. The method is developed in [Optimal inferential Control of Convolutional Neural Networks].
+Official implementation of the `Kalman-MPC`; a GPU-compatible single pass filtering and smoothing algorithm that uses matrix variate distribution. The method is developed in [Optimal Inferential Control of Convolutional Neural Networks].
 
 ## Highlights
 * We propose to address optimal control of CNNs via probabilistic inference.
