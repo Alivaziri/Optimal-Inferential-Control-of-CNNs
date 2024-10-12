@@ -26,7 +26,7 @@ Generally, there is no limit on the version of Pytorch or Python. It only depend
 * The code for training a CNN model is located in `\TwoDim_BurgersPDE\main\128by128\models\training\Burger2dUnet.py`. The grid size and CNN structure can be changed in this file. Physics-informed techniques are used to train the neural network.
 * To reproduce the results in the paper, run the code `main.py`. This will control the PDE's velocity field pixel-wise.
 
-## Comparisons with `MPPI`
+## Comparisons with model predictive path integral control
 * Navigate to the `Comparisons` folder.
 * The pre-trained model is given in `\Comparisons\trained_models\checkpoint.pt`. 
 * The code for training a CNN model is located in `\Comparisons\Training\Burgers_CNN.py`. 
