@@ -14,26 +14,26 @@ Official implementation of the `Kalman-MPC`; a GPU-compatible single pass filter
 Generally, there is no limit on the version of Pytorch or Python. It only depends on the requirements of the convolutional neural network model that is given to you or you trained. We have used
 * Python 3.7 or higher(tested on 3.7 and 3.10).
 * Pytorch (tested on 1.6 for Python 3.7 and 1.12 for Python 3.10).
-* Other packages, such as Matplotlib, Numpy and Scipy, are also used.
+* Other packages, such as Matplotlib, Numpy, and Scipy, are also used.
 
 ## Data Generation
 * For generating data, we have used the following repository:
  `https://github.com/isds-neu/PhyCRNet/tree/main/Datasets`
 
-## 2D coupled Burgers PDE
-* Navigate to the `Two_Dim_Burgers_Coupled` folder.
-* The pre-trained CNN model is given in `\Two_Dim_Burgers_Coupled\main\128by128\models\checkpoint.pt`
-* The code for training a CNN model is located in `\Two_Dim_Burgers_Coupled\main\128by128\models\training\Burger2dUnet.py`. The grid size and CNN structure can be changed in this file. The physics-informed techniques are used to train the neural network.
-* To reproduce the results in the paper, run the code `main.py` in the `\Two_Dim_Burgers_Coupled\` folder. This will control the PDE's velocity field pixel-wise. Reynolds number is set to 200 in this problem.
+## 2D Burgers PDE
+* Navigate to the `TwoDim_BurgersPDE` folder.
+* The pre-trained CNN model is given in `\TwoDim_BurgersPDE\main\128by128\models\checkpoint.pt`
+* The code for training a CNN model is located in `\TwoDim_BurgersPDE\main\128by128\models\training\Burger2dUnet.py`. The grid size and CNN structure can be changed in this file. Physics-informed techniques are used to train the neural network.
+* To reproduce the results in the paper, run the code `main.py`. This will control the PDE's velocity field pixel-wise.
 
-## 2D uncoupled Burgers PDE
-* Navigate to the 'Two_Dim_Burgers_Uncoupled' folder.
-* The pre-trained model is given in `\Two_Dim_Burgers_Uncoupled\trained_models\checkpoint.pt`. Reynolds number is set to 200 in this problem.
-* The code for training a CNN model is located in `\Two_Dim_Burgers_Uncoupled\Training\Burgers_CNN.py`. The grid size and CNN structure can be changed in this file. Physics-informed techniques are used to train the neural network.
+## Comparisons with `MPPI`
+* Navigate to the `Comparisons` folder.
+* The pre-trained model is given in `\Comparisons\trained_models\checkpoint.pt`. 
+* The code for training a CNN model is located in `\Comparisons\Training\Burgers_CNN.py`. 
 * To reproduce the results in the paper, run the code 
     * `main_BoundaryControl.py` for applying the force to the top and bottom boundaries of the PDE (finite dimension action space).
     * `main_PixelwiseControl.py` for applying the force to each pixel of the PDE (infinite dimension action space in theory, high-dimension in the simulations).
-* `\Two_Dim_Burgers_Uncoupled\MPPI\mppi_burgers.py` will generate the comparison results when the model predictive path integral controller is used for this task. You can change the covariance noises, temperature parameter Lambda, and number of samples as well as the prediction horizon in the code.
+* `\Comparisons\MPPI\mppi_burgers.py` will generate the comparison results when the model predictive path integral controller is used for this task. You can change the covariance noises, temperature parameter Lambda, and number of samples as well as the prediction horizon in the code.
 
 ## Citing
-* Please consider citing us if you find our research helpful:
+* Please consider citing us if you find our research helpful.
