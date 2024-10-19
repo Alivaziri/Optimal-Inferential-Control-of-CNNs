@@ -1,5 +1,5 @@
 ## Optimal Inferential Control of Convolutional Neural Networks
-Official implementation of the `Kalman-MPC`; a GPU-compatible single pass filtering and smoothing algorithm that uses matrix variate distribution. The method is developed in [Optimal Inferential Control of Convolutional Neural Networks].
+Official implementation of the `Kalman-MPC`; a GPU-compatible single pass filtering and smoothing algorithm that uses matrix variate distribution. The method is developed in [Optimal Inferential Control of Convolutional Neural Networks](https://scholar.google.com/scholar?q=Optimal+Inferential+Control+of+Convolutional+Neural+Networks&hl=en&as_sdt=0&as_vis=1&oi=scholart).
 
 ## Highlights
 * We propose to address optimal control of CNNs via probabilistic inference.
@@ -35,5 +35,12 @@ Generally, there is no limit on the version of Pytorch or Python. It only depend
     * `main_PixelwiseControl.py` for applying the force to each pixel of the PDE (infinite dimension action space in theory, high-dimension in the simulations).
 * `\Comparisons\MPPI\mppi_burgers.py` will generate the comparison results when the model predictive path integral controller is used for this task. You can change the covariance noises, temperature parameter Lambda, and number of samples as well as the prediction horizon in the code.
 
-## Citing
+## Citation
 * Please consider citing us if you find our research helpful.
+```bibtex
+@article{vaziri2024optimal,
+  title={Optimal Inferential Control of Convolutional Neural Networks},
+  author={Vaziri, Ali and Fang, Huazhen},
+  journal={arXiv preprint arXiv:2410.09663},
+  year={2024}
+}
