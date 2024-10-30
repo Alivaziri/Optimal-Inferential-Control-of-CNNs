@@ -23,20 +23,20 @@ Generally, there is no limit on the version of Pytorch or Python. It only depend
 ## 2D Burgers PDE
 * Navigate to the `TwoDim_BurgersPDE` folder.
 * The pre-trained CNN model is given in `\TwoDim_BurgersPDE\main\128by128\models\checkpoint.pt`
-* The code for training a CNN model is located in `\TwoDim_BurgersPDE\main\128by128\models\training\Burger2dUnet.py`. The grid size and CNN structure can be changed in this file. Physics-informed techniques are used to train the neural network.
+* The code for training a CNN model is in `\TwoDim_BurgersPDE\main\128by128\models\training\Burger2dUnet.py`. The grid size and CNN structure can be changed in this file. Physics-informed techniques are used to train the neural network.
 * To reproduce the results in the paper, run the code `main.py`. This will control the PDE's velocity field pixel-wise.
 
-## Comparisons with model predictive path integral control
+## Comparisons between `Kalman-MPC` and model predictive path integral control
 * Navigate to the `Comparisons` folder.
 * The pre-trained model is given in `\Comparisons\trained_models\checkpoint.pt`. 
-* The code for training a CNN model is located in `\Comparisons\Training\Burgers_CNN.py`. 
+* The code for training a CNN model is in `\Comparisons\Training\Burgers_CNN.py`. 
 * To reproduce the results in the paper, run the code 
     * `main_BoundaryControl.py` for applying the force to the top and bottom boundaries of the PDE (finite dimension action space).
     * `main_PixelwiseControl.py` for applying the force to each pixel of the PDE (infinite dimension action space in theory, high-dimension in the simulations).
-* `\Comparisons\MPPI\mppi_burgers.py` will generate the comparison results when the model predictive path integral controller is used for this task. You can change the covariance noises, temperature parameter Lambda, and number of samples as well as the prediction horizon in the code.
+* `\Comparisons\MPPI\mppi_burgers.py` will generate the comparison results when the model predictive path integral controller is used for this task. You can change the covariance noises, temperature parameter Lambda, the number of samples, and the prediction horizon in the code.
 
 ## Citation
-* Please consider citing us if you find our research helpful.
+* Please consider citing us in your paper if you use our code/paper.
 ```bibtex
 @article{vaziri2024optimal,
   title={Optimal Inferential Control of Convolutional Neural Networks},
