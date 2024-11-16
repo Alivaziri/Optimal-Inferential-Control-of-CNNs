@@ -26,8 +26,8 @@ Generally, there is no limit on the version of Pytorch or Python. It only depend
 * The code for training a CNN model is in `\TwoDim_BurgersPDE\main\128by128\models\training\Burger2dUnet.py`. The grid size and CNN structure can be changed in this file. Physics-informed techniques are used to train the neural network.
 * To reproduce the results in the paper, run the code `main.py`. This will control the PDE's velocity field pixel-wise.
 
-## Comparisons between `Kalman-MPC` and IT MPC
-* Comparison with [Information Theoretic Model Predictive Control: Theory and Applications to Autonomous Driving]([https://scholar.google.com/scholar?q=Optimal+Inferential+Control+of+Convolutional+Neural+Networks&hl=en&as_sdt=0&as_vis=1&oi=scholart](https://arxiv.org/abs/1707.02342)) is performed.
+## Comparisons between `Kalman-MPC` and IT-MPC
+* Comparison with [Information Theoretic Model Predictive Control: Theory and Applications to Autonomous Driving](https://arxiv.org/abs/1707.02342) is performed.
 * Navigate to the `Comparisons` folder.
 * The pre-trained model is given in `\Comparisons\trained_models\checkpoint.pt`. 
 * The code for training a CNN model is in `\Comparisons\Training\Burgers_CNN.py`. 
