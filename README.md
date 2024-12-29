@@ -26,15 +26,12 @@ Generally, there is no limit on the version of Pytorch or Python. It only depend
 * The code for training a CNN model is in `\TwoDim_BurgersPDE\main\128by128\models\training\Burger2dUnet.py`. The grid size and CNN structure can be changed in this file. Physics-informed techniques are used to train the neural network.
 * To reproduce the results in the paper, run the code `main.py`. This will control the PDE's velocity field pixel-wise.
 
-## Comparisons between `Kalman-MPC` and IT-MPC
-* Comparison with [Information Theoretic Model Predictive Control: Theory and Applications to Autonomous Driving](https://arxiv.org/abs/1707.02342) is performed.
+## Boundary control and pixel-wise control of CNN-represented PDEs
 * Navigate to the `Comparisons` folder.
 * The pre-trained model is given in `\Comparisons\trained_models\checkpoint.pt`. 
-* The code for training a CNN model is in `\Comparisons\Training\Burgers_CNN.py`. 
 * To reproduce the results in the paper, run the code 
-    * `main_BoundaryControl.py` for applying the force to the top and bottom boundaries of the PDE (finite dimension action space).
-    * `main_PixelwiseControl.py` for applying the force to each pixel of the PDE (infinite dimension action space in theory, high-dimension in the simulations).
-* `\Comparisons\MPPI\mppi_burgers.py` will generate the comparison results when the model predictive path integral controller is used for this task. You can change the covariance noises, temperature parameter Lambda, the number of samples, and the prediction horizon in the code.
+    * `\Comparisons\main_BoundaryControl.py` for applying the force to the top and bottom boundaries of the PDE.
+    * `\Comparisons\main_PixelwiseControl.py` for applying the force to each pixel of the PDE.
 
 ## Citation
 * Please consider citing us in your paper if you use our code/paper.
