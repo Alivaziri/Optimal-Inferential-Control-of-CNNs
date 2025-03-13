@@ -32,7 +32,7 @@ Generally, there is no limit on the version of Pytorch or Python. It only depend
 * The pre-trained model is given in `..\trained_models\checkpoint.pt`. 
 * To reproduce the results in the paper, run the code 
     * `..\main_BoundaryControl.py` for manipulating the top and bottom boundaries of the PDE.
-    * `..\main_PixelwiseControl.py` for applying the force to each pixel of the PDE.
+    * `..\main_PixelwiseControl.py` for applying the external source force to each pixel of the PDE (distributed optimal control of PDEs).
 
 ## Comparsion with model predictive path integral (MPPI)
 * The comparison results in the paper can be generated using the code in `MPPI Comparison/mppi_burgers.py`.
